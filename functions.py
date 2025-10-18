@@ -74,16 +74,3 @@ print("Pi value:", math.pi)
 # Using random module
 print("Random number between 1 and 10:", random.randint(1, 10))
 print("Random choice from a list:", random.choice(['apple', 'banana', 'cherry']))
-
-# --- Best Practices ---
-# - Use descriptive function names and docstrings.
-# - Prefer keyword arguments for clarity.
-# - Use default parameters to make functions flexible.
-# - Limit use of global variables; prefer local scope.
-# - Import only necessary modules/functions.
-# - Test functions with different arguments.
-
-# --- Try It Yourself ---
-# 1. Define your own function with multiple parameters.
-# 2. Experiment with local and global variables.
-# 3. Use math and random modules in your own functions.
