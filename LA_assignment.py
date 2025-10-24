@@ -11,13 +11,11 @@ def input_matrix(rows, cols, name):
         matrix.append([float(x) for x in row])
     return np.array(matrix)
 
-# Define dimensions
 a_rows = int(input("Enter number of rows for matrix A: "))
 a_cols = int(input("Enter number of columns for matrix A: "))
 b_rows = a_cols  # To ensure AB is defined
 b_cols = int(input("Enter number of columns for matrix B: "))
 
-# Input matrices
 A = input_matrix(a_rows, a_cols, "A")
 if A is None:
     exit()
