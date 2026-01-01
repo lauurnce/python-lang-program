@@ -1,4 +1,4 @@
-# Sort temperatures_ind by index values
+
 print(temperatures_ind.sort_index())
 
 # Sort temperatures_ind by index values at the city level
