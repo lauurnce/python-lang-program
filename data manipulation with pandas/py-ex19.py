@@ -8,5 +8,5 @@ temperatures_ind = temperatures.set_index("date").sort_index()
 # Use .loc[] to subset temperatures_ind for rows in 2010 and 2011
 print(temperatures_ind.loc["2010":"2011"])
 
-# Use .loc[] to subset temperatures_ind for rows from Aug 2010 to Feb 2011
-print(temperatures_ind.loc["2010-08":"2011-02"])
+# Use .loc[] to subset temperatures_ind for rows from Aug 2010 to Feb 2012
+print(temperatures_ind.loc["2010-08":"2012-02"])
