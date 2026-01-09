@@ -1,8 +1,8 @@
-# Subset rows from India, Hyderabad to Iraq, Baghdad
-print(temperatures_srt.loc[("India", "Hyderabad"): ("Iraq", "Baghdad")])
+# Add a year column to temperatures
+temperatures["year"] = temperatures["date"].dt.year
 
-# Subset columns from date to avg_temp_c
-print(temperatures_srt.loc[:, "date":"avg_temp_c"])
+# Pivot avg_temp_c by country and city vs year
+temp_by_country_city_vs_year = temperatures.pivot_table("avg_temp_c", index = ["country", "city"], columns = "year")
 
-# Subset in both directions at once
-print(temperatures_srt.loc[("India", "Hyderabad"):("Iraq", "Baghdad"), "date":"avg_temp_c"])
+# See the result
+print(temp_by_country_city_vs_year) 

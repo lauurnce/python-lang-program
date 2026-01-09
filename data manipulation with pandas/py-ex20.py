@@ -1,9 +1,11 @@
-# Import numpy and set seed
-import numpy as np
-np.random.seed(123)
+# Get the worldwide mean temp by year
+mean_temp_by_year = temp_by_country_city_vs_year.mean()
 
-# Use randint() to simulate a dice
-print(np.random.randint(1, 7))
+# Filter for the year that had the highest mean temp
+print(mean_temp_by_year[mean_temp_by_year == mean_temp_by_year.max()])
 
-# Use randint() again
-print(np.random.randint(1, 7))
+# Get the mean temp by city
+mean_temp_by_city = temp_by_country_city_vs_year.mean(axis="columns")
+
+# Filter for the city that had the lowest mean temp
+print(mean_temp_by_city[mean_temp_by_city==mean_temp_by_city.min()])
