@@ -12,4 +12,4 @@ x = 10
 final_score = x + 50
 
 def create_profile(name, is_admin=False):   # No space for defaults!
-    pass
+    
