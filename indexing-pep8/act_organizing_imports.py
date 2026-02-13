@@ -26,5 +26,5 @@ import sys
 import numpy as np
 import pandas as pd
 
-# Group 3: Local Modules
+# Group 3: Local Modules in Local Machine. 
 import my_local_config 

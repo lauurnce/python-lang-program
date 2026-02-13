@@ -17,4 +17,4 @@ def send_alert(message, user_id, timestamp,
 
 if score > 50:
     print("You passed!")  # 4 spaces here (Good!)
-    return True
+    return True 
