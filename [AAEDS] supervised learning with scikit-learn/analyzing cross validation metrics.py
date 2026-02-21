@@ -1,5 +1,5 @@
 # Print the mean
-import numpy as np
+import numpy as n
 print(np.mean(cv_results))
 
 # Print the standard deviation
