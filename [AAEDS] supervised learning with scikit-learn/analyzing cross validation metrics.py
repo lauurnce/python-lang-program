@@ -6,4 +6,4 @@ print(np.mean(cv_results))
 print(np.std(cv_results))
 
 # Print the 95% confidence interval
-print(np.quantile(cv_results, [0.025, 0.975]))
+print(np.quantile(cv_results, [0.025, 0.97]))
