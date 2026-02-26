@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 reg = LinearRegression()
 
 # Fit the model to the data
-reg.fit(X, y)
+reg.fit(X, Y)
 
 # Make predictions
 predictions = reg.predict(X)
