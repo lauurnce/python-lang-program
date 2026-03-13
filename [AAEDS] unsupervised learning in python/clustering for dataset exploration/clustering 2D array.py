@@ -2,7 +2,7 @@
 from sklearn.cluster import KMeans
 
 # Create a KMeans instance with 3 clusters: model
-model = KMeans(n_clusters=3)
+model = KMeans(n_clusters=4)
 
 # Fit model to points
 model.fit(points)
