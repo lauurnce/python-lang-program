@@ -4,7 +4,7 @@ class F1Car: #class definition
     def __init__(self, driver, team, car_model, engine): #constructor method, it defines the attributes of the class and initializes them when an object is created
         self.driver = driver #instance variable
         self.team = team 
-        self.car_model = car_model
+        self.car_model = car_model 
         self.engine = engine 
         
     def description(self): #instance method 

@@ -1,5 +1,5 @@
 # Multilevel Inheritance Example in Python
-
+# 
 class Animal:
     def __init__(self, name):
         self.name = name
@@ -10,7 +10,7 @@ class Animal:
 class Mammal(Animal):
     def __init__(self, name, fur_color):
         super().__init__(name)
-        self.fur_color = fur_color
+        self.fur_color = fur_color 
 
     def give_birth(self):
         return f"{self.name} gives birth to live young"

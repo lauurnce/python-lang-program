@@ -3,94 +3,74 @@
 # This creates a tree-like structure where one parent has multiple children
 
 class Vehicle:
-    # Class variable: shared by all Vehicle instances and subclasses
-    # Stored in class __dict__, accessible via class or instance
-    vehicle_count = 0  # Class variable - tracks total number of vehicles created
+    vehicle_count = 0  # Class variable 
 
     def __init__(self, make, model, year):
-        # Instance variables: unique to each vehicle instance
-        # Stored in instance __dict__
-        self.make = make      # Instance variable - manufacturer name
-        self.model = model    # Instance variable - model name
-        self.year = year      # Instance variable - manufacturing year
+        self.make = make      # Instance variable 
+        self.model = model   
+        self.year = year      
         Vehicle.vehicle_count += 1  # Modify class variable through class name
         print(f"Vehicle.__init__ called: {make} {model} ({year})")
 
     def start_engine(self):
-        # Instance method accessing instance variables
         return f"The {self.year} {self.make} {self.model}'s engine is starting"
 
     def stop_engine(self):
-        # Instance method
         return f"The {self.year} {self.make} {self.model}'s engine is stopping"
 
     @classmethod
     def get_vehicle_count(cls):
-        # Class method accessing class variable
         return f"Total vehicles created: {cls.vehicle_count}"
 
 class Car(Vehicle):
-    # Class variable specific to Car class
-    wheels = 4  # Class variable - all cars have 4 wheels
+    wheels = 4 
 
     def __init__(self, make, model, year, doors, fuel_type):
-        # Call parent class __init__ to initialize inherited instance variables
         super().__init__(make, model, year)
-        # Additional instance variables specific to Car
-        self.doors = doors        # Instance variable - number of doors
-        self.fuel_type = fuel_type # Instance variable - type of fuel
+        self.doors = doors        
+        self.fuel_type = fuel_type 
         print(f"Car.__init__ called: doors={doors}, fuel_type={fuel_type}")
 
     def drive(self):
-        # Instance method accessing both inherited and own instance variables
         return f"Driving the {self.year} {self.make} {self.model} ({self.doors} doors, {self.fuel_type})"
 
     def honk(self):
-        # Instance method
         return f"The {self.make} {self.model} honks: Beep beep!"
 
 class Truck(Vehicle):
-    # Class variable specific to Truck class
-    wheels = 6  # Class variable - trucks typically have more wheels
+    wheels = 6 
 
     def __init__(self, make, model, year, payload_capacity, towing_capacity):
         # Call parent class __init__
         super().__init__(make, model, year)
         # Instance variables specific to Truck
-        self.payload_capacity = payload_capacity  # Instance variable - weight capacity in tons
-        self.towing_capacity = towing_capacity    # Instance variable - towing capacity in tons
+        self.payload_capacity = payload_capacity  
+        self.towing_capacity = towing_capacity    
         print(f"Truck.__init__ called: payload={payload_capacity}t, towing={towing_capacity}t")
 
     def haul_cargo(self):
-        # Instance method accessing instance variables
         return f"The {self.make} {self.model} is hauling {self.payload_capacity} tons of cargo"
 
     def tow_vehicle(self):
-        # Instance method
         return f"The {self.make} {self.model} can tow up to {self.towing_capacity} tons"
 
 class Motorcycle(Vehicle):
-    # Class variable specific to Motorcycle class
-    wheels = 2  # Class variable - motorcycles have 2 wheels
+    wheels = 2  
 
     def __init__(self, make, model, year, engine_cc, has_sidecar):
-        # Call parent class __init__
         super().__init__(make, model, year)
-        # Instance variables specific to Motorcycle
-        self.engine_cc = engine_cc      # Instance variable - engine displacement in cc
-        self.has_sidecar = has_sidecar  # Instance variable - boolean for sidecar
+        self.engine_cc = engine_cc      
+        self.has_sidecar = has_sidecar 
         print(f"Motorcycle.__init__ called: engine={engine_cc}cc, sidecar={has_sidecar}")
 
     def wheelie(self):
-        # Instance method
         return f"The {self.make} {self.model} ({self.engine_cc}cc) does a wheelie!"
 
     def check_sidecar(self):
-        # Instance method accessing instance variable
         sidecar_status = "with sidecar" if self.has_sidecar else "without sidecar"
         return f"The {self.make} {self.model} is {sidecar_status}"
 
-# Example usage demonstrating hierarchical inheritance
+# demonstrating hierarchical inheritance
 if __name__ == "__main__":
     print("=== Creating Vehicle Instances ===")
 

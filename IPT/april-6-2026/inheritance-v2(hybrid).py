@@ -10,33 +10,26 @@ class Animal:
     def __init__(self, name, species):
         # Instance variables: unique to each instance
         # These are stored in the instance's __dict__
-        self.name = name        # Instance variable - each animal has its own name
-        self.species = species  # Instance variable - each animal has its own species
+        self.name = name        
+        self.species = species  
         print(f"Animal.__init__ called: name={name}, species={species}")
 
     def breathe(self):
-        # Instance method that can access both class and instance variables
         return f"{self.name} ({self.species}) is breathing in the {self.kingdom} kingdom"
 
 class Mammal(Animal):
-    # Class variable specific to Mammal class
-    # This shadows the parent class variable for Mammal and its subclasses
-    has_fur = True  # Class variable - all mammals have fur
+    has_fur = True
 
     def __init__(self, name, species, fur_color):
-        # Call parent class __init__ to initialize inherited instance variables
-        super().__init__(name, species)
-        # Additional instance variable for Mammal
-        self.fur_color = fur_color  # Instance variable - each mammal has its own fur color
+        super().__init__(name, species) 
+        self.fur_color = fur_color 
         print(f"Mammal.__init__ called: fur_color={fur_color}")
 
     def nurse_young(self):
-        # Instance method accessing instance variables
         return f"{self.name} nurses its young with {self.fur_color} fur"
 
 class Bird(Animal):
-    # Class variable specific to Bird class
-    can_fly = True  # Class variable - most birds can fly
+    can_fly = True
 
     def __init__(self, name, species, wingspan):
         # Call parent class __init__
