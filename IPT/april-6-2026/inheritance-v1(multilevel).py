@@ -29,7 +29,7 @@ class Dog(Mammal):
 # Example usage
 if __name__ == "__main__":
     dog = Dog("Buddy", "Brown", "Golden Retriever")
-    print(dog.speak())  # Buddy barks
-    print(dog.give_birth())  # Buddy gives birth to live young
-    print(dog.fetch())  # Buddy fetches the ball
+    print(dog.speak())  
+    print(dog.give_birth())  
+    print(dog.fetch())  
     print(f"{dog.name} has {dog.fur_color} fur and is a {dog.breed}")
