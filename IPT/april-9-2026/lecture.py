@@ -1,24 +1,29 @@
-# Simple Polymorphism Example in Python
+# Simple Polymorphism Example in Python - F1 Drivers
 
-class Animal:
-    def speak(self):
-        return "Some generic animal sound"
+class F1Driver:
+    def introduce(self):
+        return "I am an F1 driver"
 
-class Dog(Animal):
-    def speak(self):
-        return "Woof!"
+class MercedesDriver(F1Driver):
+    def introduce(self):
+        return "I drive for Mercedes"
 
-class Cat(Animal):
-    def speak(self):
-        return "Meow!"
+class FerrariDriver(F1Driver):
+    def introduce(self):
+        return "I drive for Ferrari"
+
+class RedBullDriver(F1Driver):
+    def introduce(self):
+        return "I drive for Red Bull"
 
 # Demonstrating polymorphism
-animals = [Dog(), Cat(), Animal()]
+drivers = [MercedesDriver(), FerrariDriver(), RedBullDriver(), F1Driver()]
 
-for animal in animals:
-    print(f"{animal.__class__.__name__}: {animal.speak()}")
+for driver in drivers:
+    print(f"{driver.__class__.__name__}: {driver.introduce()}")
 
 # Output:
-# Dog: Woof!
-# Cat: Meow!
-# Animal: Some generic animal sound
+# MercedesDriver: I drive for Mercedes
+# FerrariDriver: I drive for Ferrari
+# RedBullDriver: I drive for Red Bull
+# F1Driver: I am an F1 driver
