@@ -1,4 +1,14 @@
 # Lesson: Lists vs Tuples in Python
+# Introductory Part:
+# This lesson introduces two fundamental Python data structures:
+# lists and tuples. You will learn what they are, how they differ,
+# and when to use each one.
+# 
+# Learning goals:
+#  - Understand the basic definitions of lists and tuples
+#  - See how lists are mutable and tuples are immutable
+#  - Compare list and tuple syntax
+#  - Practice simple examples for both types
 
 # 1) What is a list?
 # - A list is an ordered collection of items.
